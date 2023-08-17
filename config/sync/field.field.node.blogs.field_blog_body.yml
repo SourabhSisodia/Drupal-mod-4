@@ -1,0 +1,22 @@
+uuid: e5a9292b-ba2c-4d87-8b60-9bf99e773c67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_blog_body
+    - node.type.blogs
+  module:
+    - text
+id: node.blogs.field_blog_body
+field_name: field_blog_body
+entity_type: node
+bundle: blogs
+label: 'Blog Body'
+description: 'Write your blog content here'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long
