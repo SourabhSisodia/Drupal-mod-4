@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.blogs.field_blog_body
     - field.field.node.blogs.field_blog_tags
+    - field.field.node.blogs.field_like_counts
     - node.type.blogs
   module:
     - expand_collapse_formatter
@@ -25,7 +26,7 @@ content:
       link_class_open: ecf-open
       link_class_close: ecf-close
     third_party_settings: {  }
-    weight: 101
+    weight: 1
     region: content
   field_blog_tags:
     type: entity_reference_label
@@ -33,11 +34,12 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 102
+    weight: 2
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_like_counts: true
