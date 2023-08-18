@@ -1,0 +1,5 @@
+name: Blog Cleanup
+description: Deletes blogs created by Guest Bloggers that are more than one year old every day at 5 AM.
+core_version_requirement: ^10 || ^9
+type: module
+package: Custom

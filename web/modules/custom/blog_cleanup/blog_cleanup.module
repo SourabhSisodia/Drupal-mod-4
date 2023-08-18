@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_cron().
+ */
+function blog_cleanup_cron()
+{
+  $date = new \DateTime('now - 1 year');
+  $nids = \Drupal::entityQuery('node')
+    ->condition('type', 'blogs')
+    ->condition('uid.entity.roles.entity.id', 'guest_blogger')
+    ->condition('created', $date->getTimestamp(), '<')
+    ->execute();
+
+  $storage_handler = \Drupal::entityTypeManager()->getStorage('node');
+  $nodes = $storage_handler->loadMultiple($nids);
+  $storage_handler->delete($nodes);
+}

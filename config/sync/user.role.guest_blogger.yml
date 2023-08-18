@@ -1,0 +1,21 @@
+uuid: 57f0c67f-9a97-4421-b6b1-c8f449c936e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blogs
+    - taxonomy.vocabulary.blog_tags
+  module:
+    - node
+    - taxonomy
+id: guest_blogger
+label: 'Guest Blogger'
+weight: 5
+is_admin: null
+permissions:
+  - 'create blogs content'
+  - 'create terms in blog_tags'
+  - 'delete own blogs content'
+  - 'delete terms in blog_tags'
+  - 'edit own blogs content'
+  - 'edit terms in blog_tags'
